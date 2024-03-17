@@ -1,0 +1,1 @@
+export const http = (('http://noteapi.pplgskansaka.com/api/v1/'))
