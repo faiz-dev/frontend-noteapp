@@ -18,11 +18,6 @@ function App() {
         setToken(tokens)
     }
 
-    const handleLogout = () => {
-        setToken(null)
-        localStorage.removeItem('token');
-    }
-
     useEffect(() => {
         const tokens = getToken()
         setToken(tokens);
@@ -31,7 +26,7 @@ function App() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route element={<Layout token={token} onLogout={handleLogout} />}>
+                <Route element={<Layout token={token}/>}>
                     {isLoggedin ? (
                         <>
                             <Route path={"/note"} element={<Note />} />
